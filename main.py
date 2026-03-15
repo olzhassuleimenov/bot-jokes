@@ -1,9 +1,13 @@
+import os
+from dotenv import load_dotenv
 import requests
 from bs4 import BeautifulSoup as b
 import random
 import telebot
 
-TOKEN = '8726928085:AAGSQIO4u0U3Z3lhoeM8ymcl23IReW1G6W4'
+load_dotenv()
+
+TOKEN = os.getenv('BOT_TOKEN')
 bot = telebot.TeleBot(TOKEN)
 
 def get_jokes():
